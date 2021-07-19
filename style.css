@@ -1,16 +1,20 @@
+:root {
+    --speed : 5;
+}
+
 body {
     background-color: black;
 }
 
 #pName {
-    background-color: #292929;
+    background-color: rgb(24, 26, 27);
     border: orange 3px dashed;
     height: fit-content;
     padding: 15px 30px;
     width: fit-content;
     color: rgb(24, 26, 27);
     font-size: 30pt;
-    margin: 20px auto;
+    margin: 0 auto;
     margin-top: 30px;
     font-weight: bolder;
     border-radius: 15px;
@@ -45,20 +49,24 @@ body {
     overflow: hidden;
 
     border-radius: 10px;
+    transform: translateY(-20px);
 }
     
 #slot1 {
     display: block;
-    animation: move infinite .8s;
+    animation: move infinite;
+    animation-duration: calc(1s / var(--speed));
 }
 
 #slot2 {
     display: block;
-    animation: move infinite .8s;
+    animation: move infinite ;
+    animation-duration: calc(1s / var(--speed));
 }
 #slot3 {
     display: block;
-    animation: move infinite .8s;
+    animation: move infinite ;
+    animation-duration: calc(1s / var(--speed));
 }
 
 @keyframes move {
@@ -68,4 +76,27 @@ body {
     100% {
         transform: translateY(400px);
     }
+}
+
+#speed {
+
+    border: red 2px solid;
+    width: fit-content;
+    height: fit-content;
+    font-weight: bolder;
+    border-radius: 15px;
+    font-size: 20pt;
+    padding: 10px;
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: .5px;
+
+    background-color: rgb(24, 26, 27);
+    text-shadow: 0 0 10px red ;
+    margin: 0 auto;
+    transform: translateY(-130px);
+}
+
+#speedInput {
+    font-size: 20pt;
+    width: 50px;
 }
