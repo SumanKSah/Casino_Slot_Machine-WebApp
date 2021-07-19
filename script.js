@@ -11,15 +11,22 @@ function changeValue() {
     return values[Math.floor(Math.random() * 9)]
 }
 
+let animationId;
 
-setInterval( function () {
+function animationReset(speedVal) {
+    if(animationId) clearInterval(animationId)
+
+    animationId = setInterval( function () {
    
-slot1.innerText = changeValue()
-slot2.innerText = changeValue()
-slot3.innerText = changeValue()
-
-},500)
+        slot1.innerText = changeValue()
+        slot2.innerText = changeValue()
+        slot3.innerText = changeValue()
+        
+        },1000 / speedVal)
+}
 
 speedInput.onchange = function (event) {
-    document.documentElement.style.setProperty("--speed",event.target.value)
+    let currentSpeed = event.target.value;
+    document.documentElement.style.setProperty("--speed",currentSpeed)
+    animationReset(currentSpeed)
 }
