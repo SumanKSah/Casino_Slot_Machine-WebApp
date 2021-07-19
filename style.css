@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+}
+
+#pName {
+    background-color: #292929;
+    border: orange 3px dashed;
+    height: fit-content;
+    padding: 15px 30px;
+    width: fit-content;
+    color: rgb(24, 26, 27);
+    font-size: 30pt;
+    margin: 20px auto;
+    margin-top: 30px;
+    font-weight: bolder;
+    border-radius: 15px;
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: .5px;
+
+    text-shadow: 0 0 5px red ;
+}
+
+.machine {
+    height: 550px;
+    width: 1050px;
+    border: orange 3px dashed;
+    background-color: #292929;
+    margin: 50px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+
+}
+
+.slots {
+    width: 270px;
+    height: 400px;
+    border: red 3px solid;
+    background-color: rgb(24, 26, 27);
+
+    font-size: 70pt;
+    text-align: center;
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+    
+#slot1 {
+    display: block;
+    animation: move infinite .8s;
+}
+
+#slot2 {
+    display: block;
+    animation: move infinite .8s;
+}
+#slot3 {
+    display: block;
+    animation: move infinite .8s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(400px);
+    }
+}
