@@ -1,5 +1,5 @@
 :root {
-    --speed : 1;
+    --speed : 0;
 }
 
 body {
@@ -55,18 +55,21 @@ body {
 #slot1 {
     display: block;
     animation: move infinite;
-    animation-duration: calc(1s / var(--speed));
+    /* animation-duration: calc(1s / var(--speed)); */
+    animation-duration: calc(1s *var(--speed));
 }
 
 #slot2 {
     display: block;
     animation: move infinite ;
-    animation-duration: calc(1s / var(--speed));
+    /* animation-duration: calc(1s / var(--speed)); */
+    animation-duration: calc(1s * var(--speed));
 }
 #slot3 {
     display: block;
     animation: move infinite ;
-    animation-duration: calc(1s / var(--speed));
+    /* animation-duration: calc(1s / var(--speed)); */
+    animation-duration: calc(1s * var(--speed) );
 }
 
 @keyframes move {
@@ -92,11 +95,85 @@ body {
 
     background-color: rgb(24, 26, 27);
     text-shadow: 0 0 10px red ;
-    margin: 0 auto;
-    transform: translateY(-130px);
+    /* margin: 0 auto; */
+   
+    transform: translate(500px , -125px);
+   
+
 }
 
 #speedInput {
     font-size: 20pt;
     width: 50px;
+}
+
+.tooltip {
+   display: inline-block;
+   position: relative;
+}
+
+
+.tooltip .tooltiptext {
+    background-color: black;
+    width: 200px;
+    /* height: fit-content; */
+    color: white;
+    padding: 10px;
+    font-size: 15pt;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 10px;
+    border: orange 1px solid;
+
+    position: absolute  ;
+    bottom: -60px;
+    left: -40px;
+    
+    visibility: hidden;
+    
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#spinDiv {
+    position: relative;
+    width: fit-content;
+    height: fit-content;   
+    text-shadow: 0 0 10px red ;
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: .5px;
+
+
+    transform: translate(800px , -185px);
+
+    /* transform: translateX(50px); */
+}
+
+#spinDiv .tooltiptext {
+    position: absolute;
+    width: 170px;
+    left: 30px;
+    bottom: -70px;
+}
+
+#spinBtn {
+   
+    border: red 2px solid;
+    width: 250px;
+    height: fit-content;
+    font-weight: bolder;
+    border-radius: 15px;
+    font-size: 20pt;
+    padding: 10px;
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: .5px;
+
+    background-color: rgb(24, 26, 27);
+    text-shadow: 0 0 10px red ;
+}
+#spinBtn:active {
+    background-color: #292929;
+    border: 3px solid red;
 }

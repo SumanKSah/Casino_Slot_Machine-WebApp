@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slot-Machine</title>
     <script async defer src="script.js"></script>
+    <!-- <script async defer src="rough.js"></script> -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div id="pName">
-        <span>Slot-Booking Machine</span>
+        <span>Casino Slot-Machine</span>
     </div>
-    
+
     <div class="main">
         <div class="machine">
-            <div class="slots" >
+            <div class="slots">
                 <span id="slot1">😂</span>
             </div>
-            <div class="slots" >
+            <div class="slots">
                 <span id="slot2">😎</span>
             </div>
-            <div class="slots" >
+            <div class="slots">
                 <span id="slot3">🤑</span>
             </div>
         </div>
 
+
+
         <div id="speed">
-            <span id="speedText">Speed:</span>
-            <input id="speedInput" type="number" min="1" max="10" value="1">
+            <div class="tooltip">
+                <span id="speedText">Speed:</span>
+                <input id="speedInput" type="number" min="1" max="10" value="1">
+                <span class="tooltiptext">Speed: 1-10 inclusive </span>
             </div>
+        </div>
+
+        <div id="spinDiv">
+            <div class="tooltip">
+                <button id="spinBtn" >START SPINNING</button>
+                <span class="tooltiptext">Click To Start The Game!!</span>
+            </div>
+        </div>
+
+
     </div>
 
 </body>
+
 </html>
