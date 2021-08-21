@@ -12,7 +12,7 @@ Check this out: **[Click Here](https://sumanksah.github.io/Casino_Slot_Machine-W
 
 ![Interface Image](Images/Layout.png) <br><br>
 ![Task Image](Images/SpeedLimit.png) <br><br>
-![Game Scene](Images/GameScene.png) <br>
+![Game Scene](Images/GameScene.png) <br><br>
+![Result Window](Images/result.png) <br><br>
 
-### Work Under Progress!!
-&emsp; 1. Pop-up window for the Result.
+### Enjoy!!

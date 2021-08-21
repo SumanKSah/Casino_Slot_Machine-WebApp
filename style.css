@@ -1,9 +1,12 @@
 :root {
-    --speed : 0;
+    --speed: 0;
 }
 
 body {
     background-color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #pName {
@@ -19,9 +22,9 @@ body {
     font-weight: bolder;
     border-radius: 15px;
     -webkit-text-stroke-color: red;
-    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
 
-    text-shadow: 0 0 5px red ;
+    text-shadow: 0 0 5px red;
 }
 
 .machine {
@@ -35,7 +38,6 @@ body {
     align-items: center;
     justify-content: space-evenly;
     border-radius: 50px;
-
 }
 
 .slots {
@@ -51,25 +53,25 @@ body {
     border-radius: 10px;
     transform: translateY(-20px);
 }
-    
+
 #slot1 {
     display: block;
     animation: move infinite;
     /* animation-duration: calc(1s / var(--speed)); */
-    animation-duration: calc(1s *var(--speed));
+    animation-duration: calc(1s * var(--speed));
 }
 
 #slot2 {
     display: block;
-    animation: move infinite ;
+    animation: move infinite;
     /* animation-duration: calc(1s / var(--speed)); */
     animation-duration: calc(1s * var(--speed));
 }
 #slot3 {
     display: block;
-    animation: move infinite ;
+    animation: move infinite;
     /* animation-duration: calc(1s / var(--speed)); */
-    animation-duration: calc(1s * var(--speed) );
+    animation-duration: calc(1s * var(--speed));
 }
 
 @keyframes move {
@@ -82,7 +84,6 @@ body {
 }
 
 #speed {
-
     border: red 2px solid;
     width: fit-content;
     height: fit-content;
@@ -91,15 +92,13 @@ body {
     font-size: 20pt;
     padding: 10px;
     -webkit-text-stroke-color: red;
-    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
 
     background-color: rgb(24, 26, 27);
-    text-shadow: 0 0 10px red ;
+    text-shadow: 0 0 10px red;
     /* margin: 0 auto; */
-   
-    transform: translate(500px , -125px);
-   
 
+    transform: translate(500px, -125px);
 }
 
 #speedInput {
@@ -108,10 +107,9 @@ body {
 }
 
 .tooltip {
-   display: inline-block;
-   position: relative;
+    display: inline-block;
+    position: relative;
 }
-
 
 .tooltip .tooltiptext {
     background-color: black;
@@ -125,12 +123,11 @@ body {
     border-radius: 10px;
     border: orange 1px solid;
 
-    position: absolute  ;
+    position: absolute;
     bottom: -60px;
     left: -40px;
-    
+
     visibility: hidden;
-    
 }
 
 .tooltip:hover .tooltiptext {
@@ -140,13 +137,12 @@ body {
 #spinDiv {
     position: relative;
     width: fit-content;
-    height: fit-content;   
-    text-shadow: 0 0 10px red ;
+    height: fit-content;
+    text-shadow: 0 0 10px red;
     -webkit-text-stroke-color: red;
-    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
 
-
-    transform: translate(800px , -185px);
+    transform: translate(800px, -185px);
 
     /* transform: translateX(50px); */
 }
@@ -158,8 +154,7 @@ body {
     bottom: -70px;
 }
 
-#spinBtn {
-   
+#spinBtn, #btnPopup {
     border: red 2px solid;
     width: 250px;
     height: fit-content;
@@ -168,12 +163,97 @@ body {
     font-size: 20pt;
     padding: 10px;
     -webkit-text-stroke-color: red;
-    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-width: 0.5px;
 
     background-color: rgb(24, 26, 27);
-    text-shadow: 0 0 10px red ;
+    text-shadow: 0 0 10px red;
 }
-#spinBtn:active {
+#spinBtn:active, #btnPopup:active {
     background-color: #292929;
     border: 3px solid red;
+}
+
+#popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(
+        rgba(44, 44, 44, 0.3),
+        rgba(255, 255, 255, 0.3)
+    );
+    z-index: 10;
+    background-color: transparent;
+}
+
+
+#popupWindow {
+    position: absolute;
+    width: 300px;
+    padding: 20px;
+    height: fit-content;
+    display: inline-block;
+    margin: auto;
+    top: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #292929;
+    border: orange 3px dashed;
+    border-radius: 15px;
+
+    animation-name: popupAnimation;
+    animation-duration: .5s;
+}
+
+.emoji{
+    display: inline-block;
+    border: orange 3px solid;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+#resultEmoji {
+    display: flex;
+    
+}
+
+#gameResult {
+    border-bottom: 3px orange solid;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    height: fit-content;
+    font-weight: bolder;
+    margin: 0;
+    margin-top: 16px;
+    margin-left: -10px;
+    z-index: 2;
+    font-size: 20pt;
+    padding: 13px 50px;
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: 0.5px;
+    background-color: rgb(24, 26, 27);
+    text-shadow: 0 0 10px red;
+}
+
+#btnPopup {
+    width: fit-content;
+    float: right;
+}
+
+#lose{
+    display: none;
+}
+
+@keyframes popupAnimation {
+    0%{
+        transform: translateY(800px) scale(0,0);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slot-Machine</title>
-    <script async defer src="script.js"></script>
+    <script defer src="script.js"></script>
     <!-- <script async defer src="rough.js"></script> -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -42,12 +42,24 @@
 
         <div id="spinDiv">
             <div class="tooltip">
-                <button id="spinBtn" >START SPINNING</button>
+                <button id="spinBtn">START SPINNING</button>
                 <span class="tooltiptext">Click To Start The Game!!</span>
             </div>
         </div>
 
+    </div>
 
+    <div id="popup">
+        <div id="popupWindow">
+            <div id="resultEmoji">
+                <img src="./Images/happy.png" alt="winEmoji" class="emoji" id="win" width="80">
+                <img src="./Images/sad.png" alt="loseEmoji" class="emoji" id="lose" width="80">
+            
+            <h3 id="gameResult">You Win!!</h3>
+        </div>
+            <br>
+            <button type="button" id="btnPopup">OK!</button>
+        </div>
     </div>
 
 </body>
