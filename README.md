@@ -1,4 +1,4 @@
-# TODO-WebApp
+# CasinoSlotMachine-WebApp
 
 This is a simple Casino Slot-Machine web application, made using HTML, CSS and Javascript. <br>
 Rules: <br>
